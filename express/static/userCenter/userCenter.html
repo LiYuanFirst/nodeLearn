@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/ydui.rem.css">
+    
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!--自定义icon-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="../js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="../js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="../js/ydui.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+	<div id="userCenter">
+		<a class="header" href="./userData.html">
+			<div class="img-con">
+				<div class="box">
+					<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_view_01.png"/>
+			
+				</div>
+			</div>	
+			<div class="data">
+				<div class="name">马云</div>
+				<div class="mobile">153972362229</div>
+			</div>
+		</a>
+		<div class="container">
+			<yd-cell-group>
+		        
+		        <yd-cell-item arrow href="#" type="a">
+		            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_icon_01.png">
+		            <span slot="left">缴费记录</span>
+		        </yd-cell-item>
+		        <yd-cell-item arrow href="#" type="a">
+		            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_icon_02.png">
+		            <span slot="left">报修记录</span>
+		        </yd-cell-item>
+		    </yd-cell-group>
+		    <yd-cell-group>
+		        
+		        <yd-cell-item arrow href="./accountChange.html" type="a">
+		            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_icon_03.png">
+		            <span slot="left">账户管理</span>
+		        </yd-cell-item>
+		        <yd-cell-item href="#" type="a">
+		            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_icon_04.png">
+		            <span slot="left">推送设置</span>
+		            <yd-switch slot="right" v-model="isReveiveMessage" color="#B22C23"></yd-switch>
+		        </yd-cell-item>
+		    </yd-cell-group>
+		    <yd-cell-group>
+		        
+		        <yd-cell-item arrow @click.native="unbound" >
+		            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/personal_icon_05.png">
+		            <span slot="left">解除绑定</span>
+		        </yd-cell-item>
+		        
+		    </yd-cell-group>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	$(function() {
+	    FastClick.attach(document.body);
+	    new Vue({
+	        el: '#app',
+	        data:{
+	        	isReveiveMessage:true
+	        	
+	        },
+	        methods: {
+	            unbound:function(){
+		                this.$dialog.confirm({
+		                    title: '解除绑定',
+		                    mes: '是否解除绑定！',
+		                    opts: () => {
+		                    	localStorage.removeItem("isLogin");
+		                        this.$dialog.toast({
+		                        	mes: '解除绑定成功', 
+		                        	timeout: 1000,
+		                        	callback:() => {
+		                        		 window.location.href="../index.html"
+		                        	}
+		                        });
+		                    }
+		                });
+	            	
+	            }
+	           
+	        },
+	        
+	        beforeMount:function(){
+	        	
+	         	
+	        },
+	        watch:{
+	        	isReveiveMessage(curVal,oldVal){
+	        		console.log(curVal);
+	        		if(curVal){
+	        			this.$dialog.toast({
+	        				mes: '您现在可以接受推送的消息了',
+	        				timeout: 1000
+	        			});
+	        		}else{
+	        			return false
+	        		}
+	        	}
+	        }
+	        
+	    })
+	});
+    
+</script>
+</body>
+</html>

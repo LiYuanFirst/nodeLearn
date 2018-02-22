@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>社区动态</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/ydui.rem.css">
+    
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!--自定义icon-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="../js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="../js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="../js/ydui.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body style="background:#fff">
+<div id="app" v-cloak>
+	<div class="noticeDetail">
+		<h3 style="">{{title}}</h3>
+		<div class="notice-con" v-html="detail">
+			
+		</div>
+	</div>
+	
+</div>
+
+<script>
+
+	$(function() {
+	    FastClick.attach(document.body);
+	    new Vue({
+	        el: '#app',
+	        data:{
+	        	title:'电梯维修通告',
+	        	detail:`<p>
+						    尊敬的租户：<br/>
+						</p>
+						<p>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电梯经检查为主板损坏，现已联系厂家调配零件，发货时间需要3-5天。请您知晓。<br/>
+						</p>
+						<p>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议您乘坐相邻区域电梯或走楼梯锻炼身体。<br/>
+						</p>
+						<p>
+						    <br/>
+						</p>
+						<p style="text-align: right;color:#999;">
+						    2017-11-15<br/>
+						</p>`,
+	        	
+	        },
+	        methods: {
+	           
+	        },
+	        
+	        beforeMount:function(){
+	        	
+	         	
+	        }
+	        
+	    })
+	});
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/ydui.rem.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="../js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="../js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="../js/ydui.js"></script>
+	
+</head>
+<body>
+<div id="app"v-cloak>
+	<div class="w-index">
+		<div class="header">
+			<div class="title">
+				<span class="left">我的工单</span>
+				<span class="right">工号：13415</span>
+			</div>
+			<div class="con">
+				<div class="item">
+					<span class="name">本月已处理工单：</span>
+					<span class="val">12</span>
+				</div>
+				<div class="item">
+					<span class="name">2017年度累计处理工单：</span>
+					<span class="val">180</span>
+				</div>
+					
+			</div>
+		</div>
+		<div class="yd-rollnotice" style="height: 40px;">
+			<div class="yd-rollnotice-box yd-rollnotice-align-left" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+				<div class="yd-rollnotice-item">
+					<a href="./communityService/noticeDetail.html">
+						<span class="icon"></span> 
+						<span class="label">通知</span> 
+						<span class="text">您有三条<span class="red">3条</span>待处理工单，请及时处理！</span>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="list-con">
+			<a class="card" v-for="item in list" href="./detail.html">
+				<span class="blink">{{item.pace}}</span>
+				<div class="order-code">
+					<span>工单编号 {{item.code}}</span>
+					<span class="sign" v-show="item.sign">急</span>
+				</div>
+				<div class="item">
+					<div class="item-name">
+						报修地址
+					</div>
+					<div class="item-val">
+						{{item.address}}
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-name">
+						联系电话
+					</div>
+					<div class="item-val">
+						{{item.tel}}
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-name">
+						报修时间
+					</div>
+					<div class="item-val">
+						{{item.time}}
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-name">
+						描述
+					</div>
+					<div class="item-val">
+						{{item.des}}
+					</div>
+				</div>
+			</a>
+			
+		</div>
+	</div>
+    
+    
+    
+</div>
+
+<script>
+	$(function() {
+	    FastClick.attach(document.body);
+	    
+	});
+	
+    new Vue({
+        el: '#app',
+        data:{
+        	list:[
+        		{
+        			id:'001',
+        			code:'201708310001',
+        			address:'南区1栋1001室',
+        			tel:"15398781111",
+        			time:'2017-10-07 12:00',
+        			des:'下水慢，可能堵住了',
+        			pace:'待处理',
+        			sign:false
+        			
+        		},
+        		{
+        			id:'002',
+        			code:'201708310002',
+        			address:'南区1栋1001室',
+        			tel:"15398781111",
+        			time:'2017-10-07 12:00',
+        			des:'下水慢，可能堵住了',
+        			pace:'已处理',
+        			sign:true
+        			
+        		},
+        		{
+        			id:'003',
+        			code:'201708310003',
+        			address:'南区1栋1001室',
+        			tel:"15398781111",
+        			time:'2017-10-07 12:00',
+        			des:'下水慢，可能堵住了',
+        			pace:'处理中',
+        			sign:false
+        			
+        		}
+        	]
+        },
+        methods: {
+           
+        },
+        computed:{
+        	
+        },
+        created:function(){
+        	
+        }
+        
+    })
+</script>
+</body>
+</html>

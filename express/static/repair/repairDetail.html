@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>报事报修</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/ydui.rem.css">
+    
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    
+    <!--自定义icon-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!-- 引入rem自适应类库 -->
+    <script src="../js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+<script src="../js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="../js/ydui.js"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+	<div class="repair-detail-header">
+		<yd-cell-group>
+	        <yd-cell-item>
+	            <img slot="icon" src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/repair_order_icon2.png">
+	            <div slot="left">
+	            	<div class='item'>
+	            		<span class="item-name">当前状态</span>
+	            		<span class="item-val yellow">已完成</span>
+	            	</div>
+	            	<div class='item'>
+	            		<span class="item-name">订单编号</span>
+	            		<span class="item-val">123456789</span>
+	            	</div>
+	            	<div class='item'>
+	            		<span class="item-name">订单类型</span>
+	            		<span class="item-val">报修</span>
+	            	</div>
+	            </div>
+	            
+	        </yd-cell-item>
+	    </yd-cell-group>
+	</div>
+	<div class="order-data">
+		<yd-cell-group>
+            <yd-cell-item>
+                <div slot="left">
+                	<span class='name'>维修地址</span>
+                	<span class='val'>***路****号***室</span>
+                </div>
+            </yd-cell-item>
+            <yd-cell-item>
+                <div slot="left">
+                	<span class='name'>联系人</span>
+                	<span class='val'>李先生</span>
+                </div>
+            </yd-cell-item>
+            <yd-cell-item>
+                <div slot="left">
+                	<span class='name'>联系电话</span>
+                	<span class='val'>15374542362</span>
+                </div>
+            </yd-cell-item>
+            <yd-cell-item>
+                <div slot="left">
+                	<span class='name'>报修类型</span>
+                	<span class='val'>给排水</span>
+                </div>
+            </yd-cell-item>
+            <yd-cell-item>
+                <div slot="left">
+                	<span class='name'>报修描述</span>
+                	<span class='val'>厨房下水道堵塞</span>
+                </div>
+            </yd-cell-item>
+            
+        </yd-cell-group>
+	</div>
+	<div class="order-step">
+		<yd-timeline>
+	        <yd-timeline-item>
+	            <div class="step-con">
+	            	<yd-flexbox>
+			            <div><span>2017-08-18</span><span> 07:25</span></div>
+			            <yd-flexbox-item >完成维修</yd-flexbox-item>
+			        </yd-flexbox>
+	            </div>
+	        </yd-timeline-item>
+	        <yd-timeline-item>
+	            <div class="step-con">
+	            	<yd-flexbox>
+			            <div><span>2017-08-18</span><span> 07:25</span></div>
+			            <yd-flexbox-item >维修中</yd-flexbox-item>
+			        </yd-flexbox>
+	            </div>
+	        </yd-timeline-item>
+	        <yd-timeline-item>
+	            <div class="step-con">
+	            	<yd-flexbox>
+			            <div><span>2017-08-18</span><span> 07:25</span></div>
+			            <yd-flexbox-item >提交订单</yd-flexbox-item>
+			        </yd-flexbox>
+	            </div>
+	        </yd-timeline-item>
+	        
+	    </yd-timeline>
+	</div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+        	selectShow:'',
+        	isRed:true
+        	
+        },
+        methods: {
+           selectDown1:function(){
+           	this.selectShow1 = "show2"
+           }
+        }
+        
+    })
+</script>
+</body>
+</html>

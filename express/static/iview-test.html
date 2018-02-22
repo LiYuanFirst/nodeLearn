@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/ydui.rem.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="js/ydui.js"></script>
+</head>
+<body>
+<div id="app">
+   	<div>
+	     <yd-infinitescroll :callback="loadList" ref="infinitescrollDemo">
+	
+	        <yd-list theme="1" slot="list">
+	            <yd-list-item v-for="item, key in list" :key="key">
+	                <img slot="img" :src="item.img">
+	                <span slot="title">{{item.title}}</span>
+	                <yd-list-other slot="other">
+	                    <div>
+	                        <span class="list-price"><em>¥</em>{{item.marketprice}}</span>
+	                        <span class="list-del-price">¥{{item.productprice}}</span>
+	                    </div>
+	                    <div>content</div>
+	                </yd-list-other>
+	            </yd-list-item>
+	        </yd-list>
+	
+	        <!-- 数据全部加载完毕显示 -->
+	        <span slot="doneTip">啦啦啦，啦啦啦，没有数据啦~~</span>
+	
+	        <!-- 加载中提示，不指定，将显示默认加载中图标 -->
+	        <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg"/>
+	
+	    </yd-infinitescroll>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            page: 1,
+                pageSize: 10,
+                list: [
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/23/14381920926024616259.jpg",
+                        title: "标题标题标题标题标题",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    },
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg",
+                        title: "骆驼男装2016夏装男士短袖T恤 圆领衣服 印花男装体恤 半袖打底衫",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    },
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg",
+                        title: "条纹短袖T恤男士韩版衣服大码潮流男装夏季圆领体恤2016新款半袖",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    },
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg",
+                        title: "夏季青少年衣服男生潮牌t恤 男士 夏秋学生 日系棉短袖半袖男小衫",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    },
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/26/12365720933909085511.jpg",
+                        title: "2016夏装新款时尚潮流短袖T恤男纯棉V领日系青少年韩版夏季上衣服",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    },
+                    {
+                        img: "http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg",
+                        title: "男装衣服男夏t恤 男士短袖t恤圆领夏季潮牌宽松原宿风半截袖男",
+                        marketprice: 56.23,
+                        productprice: 89.36
+                    }
+                ]
+        },
+        methods: {
+            loadList() {
+            	var _this = this;
+            	setTimeout(function(){
+            		
+            	
+	            	$.ajax({  
+			             type: "get",  
+			             async: false, 
+			             data: {
+	                        page: _this.page,
+	                        pagesize: _this.pageSize
+	                   	 },
+			             url: "http://list.ydui.org/getdata.php?type=backposition",  
+			             dataType: "jsonp",  
+			             success: function(response){  
+			               console.log(response)
+			                _this.list = [..._this.list, ...response];
+			               	_this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+			               	console.log(_this.list );
+							_this.page++;
+			             },  
+			             error: function(){  
+			                 alert('fail');  
+			             }  
+			         }); 
+                },1000)
+            }
+            
+        }
+    })
+  </script>
+</body>
+</html>

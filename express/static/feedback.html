@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>意见反馈</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/ydui.rem.css">
+    
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="js/ydui.js"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+	<div class="feedback">
+		<yd-cell-group>
+	        <yd-cell-item>
+	            <yd-textarea slot="right" placeholder="请输入您的银行卡卡号和密码" v-model="text" maxlength="100"></yd-textarea>
+	        </yd-cell-item>
+	    </yd-cell-group>
+	    <div class="img-upload">
+	    	<div class="img-con">
+	    		<div :style="'background:url('+imgChose+')center center no-repeat;background-size:contain;'" v-show="!imgChose==''"></div>
+	    	</div>
+	    </div>
+	    <yd-button size="large" type="danger" @click.native="submit" :disabled='isDisabled'>提交</yd-button>
+	</div>
+    
+</div>
+
+<script>
+	$(function() {
+	    FastClick.attach(document.body);
+	    new Vue({
+	        el: '#app',
+	        data:{
+	        	text:'',
+	        	imgChose:"",
+	        	isDisabled:false
+	        },
+	        methods: {
+	            submit:function(){
+	            	var str = this.text;
+	            	var str2 = str.replace(/[ ]/g,"");
+	            	var str3 = str2.replace(/[\r\n]/g,"");
+	            	if(str3.length ==0){
+	            		this.$dialog.toast({
+			                mes: "请输入反馈内容",
+			                icon: 'error',
+			                timeout: 1500
+							
+			            });
+	            	}else{
+	            		this.$dialog.toast({
+		                    mes: '提交成功',
+		                    timeout: 1500,
+		                    icon: 'success',
+		                    callback: () => {
+			                     window.location.href="./index.html"; 
+			                }
+		           	    });
+	            	}
+	            	
+	            }
+	        },
+	        beforeCreate:function(){
+	         	
+	        }
+	        
+	    })
+	});
+	
+    
+</script>
+</body>
+</html>

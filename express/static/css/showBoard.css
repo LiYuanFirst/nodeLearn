@@ -1,0 +1,349 @@
+[v-cloak] {
+            display: none;
+        }
+.icon img{
+	width: 100%;
+}
+.container{
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	flex-direction: column;
+}
+.container header{
+	font-size: 0;
+	
+}
+.container header img{
+	width: 100%;
+}
+.container .con{
+	flex: 1;
+	
+	display: flex;
+	color: #fff;
+}
+.con .left{
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/bg2.png) center center no-repeat;
+	background-size: cover;
+	background-color: #1d1414;
+	height: 100%;
+	overflow-y: auto;
+}
+.con .left .null{
+	height: 1rem;
+}
+.con .right{
+	flex: 1;
+	overflow: hidden;
+	overflow-y: auto;
+	padding: .2rem;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/bg1.png) center center no-repeat;
+	background-color: rgb(34,32,30);
+	background-size: cover;
+}
+.user-data{
+	text-align: center;
+	padding: .18rem 0 .4rem;
+}
+.user-data img{
+	display: block;
+	width: 1.6rem;
+	border-radius:50% ;
+	margin: .2rem auto 0;
+}
+.user-data .text{
+	font-size: .3rem;
+	margin-top: .1rem;
+	
+}
+
+.left-meanu{
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+.left-meanu .left-item{
+	height: .72rem;
+	line-height: .28rem;
+	position: relative;
+	overflow: hidden;
+}
+.left-meanu .left-item:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-bottom: solid 1px #302222;
+	
+}
+.left-item span{
+	display: inline-block;
+	font-size: 0;
+	vertical-align: top;
+	float: left;
+}
+.left-item span.icon{
+	width: .48rem;
+	margin: .12rem .2rem;
+}
+.left-item span.text{
+	line-height: .72rem;
+	font-size:.28rem;
+	color: #caa770;
+}
+.left-item span.yd-badge{
+	float: right;
+	font-size: .18rem;
+	margin-top: .22rem;
+	margin-right:.2rem;
+	margin-left: .2rem;
+	padding: .06rem .12rem 0rem;
+}
+.date-chose{
+	text-align: right;
+	font-size: 0;
+}
+.date-con{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: .2rem;
+}
+.date-con span{
+	display: inline-block;
+	width:1.2rem;
+	background: rgba(0,0,0,.2);
+	height: .64rem;
+	vertical-align: top;
+	line-height: .64rem;
+	text-align: center;
+	font-size: .26rem;
+}
+.date-con span.date-today{
+	border-right:solid 1px #2d2d2b;
+}
+.chose-con{
+	display: inline-block;
+	position: relative;
+	width: 3.2rem;
+	height: .64rem;
+	margin-left: .2rem;
+	background: rgba(0,0,0,.2);
+	margin-bottom: .2rem;
+}
+.chose-con #date1{
+	display: inline-block;
+	border: none;
+	padding: 0 .5rem;
+	width: 3.2rem;
+	text-align: center;
+	color: #fff;
+	font-size: .26rem;
+	height: .64rem;
+}
+.chose-con .icon{
+	display: inline-block;
+	width: .36rem;
+	position: absolute;
+	margin-top: .14rem;
+}
+.chose-con .date-chose-con{
+	display: inline-block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: 5;
+	font-size: .26rem;
+	line-height: .64rem;
+	text-align: center;
+}
+
+.chose-con .icon-left{
+	top: 0;
+	left: .2rem;
+	
+}
+.chose-con .icon-right{
+	top: 0;
+	right: .2rem;
+	
+}
+.yd-progressbar-content{
+	color: #fff;
+}
+.service-type{
+	display: flex;
+	flex-wrap: wrap;
+	margin: .4rem 0;
+}
+.service-type .time-con{
+	flex: 1;
+	
+}
+.service-type .time-con .time{
+	width: 1.4rem;
+	margin: 0 auto;
+	text-align: right;
+}
+.service-type .time-con .time-slot{
+	font-size: .26rem;
+	line-height: .4rem;
+	margin-top: .4rem;
+}
+.service-type .time-con .time-now{
+	font-size: .48rem;
+	line-height: .6rem;
+}
+.service-type .service-con .item{
+	display: flex;
+	margin-left: .2rem;
+}
+.service-type .service-con .item .item-con{
+	width: 1.8rem;
+	height: 1.8rem;
+}
+.service-type .service-con .service-des .name{
+	font-size:.36rem;
+	text-align: center;
+	line-height: .5rem;
+	margin:.5rem 0rem 0 .1rem;
+}
+.service-type .service-con .service-des .rel{
+	font-size:.22rem;
+	text-align: center;
+	line-height: .3rem;
+	
+	
+}
+.chart{
+	display: flex;
+	flex-wrap: wrap;
+}
+.chart-con{
+	position: relative;
+}
+
+.chart .chart-con1{
+	flex: 1;
+	padding-right: .2rem;
+}
+.chart-con .chart-title{
+	display: flex;
+	/*height: .56rem;*/
+	background: rgba(0,0,0,.2);
+	position: relative;
+	
+	
+}
+.chart-con .chart-title:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: solid 1px rgba(0,0,0,.3);
+	transform: scaleY(.5);
+	
+}
+.chart-con .chart-title .text{
+	flex: 1;
+	line-height: .68rem;
+	font-size: .36rem;
+	padding-left: .2rem;
+	padding-right: .2rem;
+	min-width: 1.6rem;
+}
+.chart-con .chart-title span{
+	position: relative;
+}
+.chart-con .chart-title .icon-right:after,.chart-con .chart-title .text:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-right: solid 1px rgba(0,0,0,.3);
+	transform: scaleX(.5);
+}
+.chart-con .chart-title .icon{
+	
+	padding: .1rem .2rem;
+}
+.chart-con .chart-title .icon.icon-right{
+	padding: .19rem .24rem;
+	
+}
+.chart-con .chart-title .icon.icon-right img{
+	height: .3rem;
+}
+.chart-con .chart-title .icon img{
+	width: auto;
+	height: .48rem;
+}
+.chart-con .chart-box{
+	position: relative;
+	background: rgba(0,0,0,.2);
+}
+.chart-con .chart-box .chart-point{
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	font-size: .28rem;
+}
+
+
+.data-table{
+	background: rgba(0,0,0,.3);
+	margin-top: 20px;
+}
+.data-table table{
+	width: 100%;
+	color: #fff;
+	font-size: 14px;
+}
+.data-table table th{
+	text-align: left;
+}
+.data-table table .status{
+	width: 47px;
+}
+.data-table .wrapper{
+	margin: 3px 0;
+	height: 100%;
+	padding-left:10px;
+}
+.data-table .border-left .wrapper{
+	border-left: solid 1px #5e5d5c;
+	
+}
+.data-table td .wrapper{
+	height: 68px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+.data-table .wrapper .name,.data-table .wrapper .time,.data-table .wrapper .address{
+	overflow: hidden;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+}
+.data-table tr{
+	
+	border-bottom: solid 1px rgba(50,50,50,.3);
+	
+}
+.data-table .wrapper .btn{
+	display: inline-block;
+	font-size: 14px;
+	padding: 0px 8px;
+	border: solid 1px #f35857;
+	border-radius: 3px;
+	margin-top: 2px;
+}
+.data-table .wrapper .btn:active{
+	background: #f35857;
+}

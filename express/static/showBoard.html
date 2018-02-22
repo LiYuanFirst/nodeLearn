@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>物业看板</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <!-- 引入样式 -->
+	    <link rel="stylesheet" href="css/ydui.rem.css">
+	    <!--引入自定义样式-->
+	    <link rel="stylesheet" type="text/css" href="css/showBoard.css"/>
+	    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+	    <!-- 引入rem自适应类库 -->
+	    <script src="js/ydui.flexible.js"></script>
+	    <!-- 引入 Vue -->
+		<script src="js/vue.js"></script>
+		<!-- 引入组件库 -->
+		<script src="js/ydui.js"></script>
+		
+	</head>
+	<body style="height: 100%;">
+		<div id="app"style="height: 100%;"v-cloak>
+			<div class="container">
+				<header>
+					<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/bg3.jpg"/>
+				</header>
+				<div class="con">
+					<div class="left" id="scroll1">
+						<div>
+						<div class="user-data">
+							<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/head-portrait.png" />
+							<div class="text">金牌管家</div>
+						</div>
+						<div class="left-meanu">
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-1.png"/>
+		  							</span>
+		  							<span class="text">
+		  								首页
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-2.png"/>
+		  							</span>
+		  							<span class="text">
+		  								缴费服务
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-3.png"/>
+		  							</span>
+		  							<span class="text">
+		  								报事报修
+		  							</span>
+		  							<yd-badge type="danger">1</yd-badge>
+		  						</a>
+							</div>
+							
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-4.png"/>
+		  							</span>
+		  							<span class="text">
+		  								访客通行
+		  							</span>
+		  							<yd-badge type="danger">12</yd-badge>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-5.png"/>
+		  							</span>
+		  							<span class="text">
+		  								快递收发
+		  							</span>
+		  							<yd-badge type="danger">99+</yd-badge>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-6.png"/>
+		  							</span>
+		  							<span class="text">
+		  								员工管理
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-7.png"/>
+		  							</span>
+		  							<span class="text">
+		  								社区动态
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-8.png"/>
+		  							</span>
+		  							<span class="text">
+		  								周边商户
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-9.png"/>
+		  							</span>
+		  							<span class="text">
+		  								便民服务
+		  							</span>
+		  						</a>
+							</div>
+							<div class="left-item">
+								<a href="###">
+		  							<span class="icon">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon1-10.png"/>
+		  							</span>
+		  							<span class="text">
+		  								意见反馈
+		  							</span>
+		  						</a>
+							</div>
+						</div>
+						<div class='null'></div>
+						</div>
+					</div>
+					<div class="right" id="scroll2">
+						<div>
+							<div class="date-chose">
+								<div class="date-con">
+									<span class="date-today" v-on:click="test()">今天</span>
+									<span class="date-yesterday">昨天</span>
+								</div>
+								<div class="chose-con">
+									<span class="icon icon-left">
+										<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon3-1.png"/>
+									</span>
+									<!--<input type="text" readonly="readonly" class="text auto-kal" value="2017/06/12" id="date1"/>-->
+									<span class="date-chose-con"><yd-datetime type="date" ref="datetime" v-model="date1" slot="right"></yd-datetime></span>
+									<span class="icon icon-right">
+		  								<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon3-2.png"/>
+		  							</span>
+								</div>
+							</div>
+							<div class="service-type">
+								<div class="time-con">
+									<div class="time">
+										<div class="time-slot" v-text="timeSlot" ></div>
+										<div class="time-now" v-text="timeNow" ></div>
+									</div>
+								</div>
+								<div class="service-con">
+									<div class="item">
+										<div class="item-con">
+								            <yd-progressbar
+								                    :progress="progress1"
+								                    trail-width="2"
+								                    stroke-width="2"
+								                    stroke-color="#000"
+								                    trail-color="#fff"
+								                    fill-color="rgba(0,0,0,0)"
+								            >{{100}}</yd-progressbar>
+								        </div>
+								        <div class="service-des">
+								        	<div class="name">急修</div>
+								        	<div class="rel">{{progress1*100}}%</div>
+								        </div>
+									</div>
+								</div>
+								<div class="service-con">
+									<div class="item">
+										<div class="item-con">
+								            <yd-progressbar
+								                    :progress="progress1"
+								                    trail-width="2"
+								                    stroke-width="2"
+								                    stroke-color="#000"
+								                    trail-color="#fff"
+								                    fill-color="rgba(0,0,0,0)"
+								            >{{100}}</yd-progressbar>
+								        </div>
+								        <div class="service-des">
+								        	<div class="name">急修</div>
+								        	<div class="rel">{{progress1*100}}%</div>
+								        </div>
+									</div>
+								</div>
+								<div class="service-con">
+									<div class="item">
+										<div class="item-con">
+								            <yd-progressbar
+								                    :progress="progress1"
+								                    trail-width="2"
+								                    stroke-width="2"
+								                    stroke-color="#000"
+								                    trail-color="#fff"
+								                    fill-color="rgba(0,0,0,0)"
+								            >{{100}}</yd-progressbar>
+								        </div>
+								        <div class="service-des">
+								        	<div class="name">急修</div>
+								        	<div class="rel">{{progress1*100}}%</div>
+								        </div>
+									</div>
+								</div>
+							</div>
+							<div class='chart'>
+		  						<div class="chart-con chart-con1">
+		  							<div class="chart-title">
+		  								<span class='icon icon-left'>
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon2-2.png"/>
+		  								</span>
+		  								<span class="text">访客通行</span>
+		  								<span class="icon icon-right">
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon4-2.png"/>
+		  								</span>
+		  								<span class="icon icon-right">
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon4-1.png"/>
+		  								</span>
+		  							</div>
+		  							<div class="chart-box">
+		  								<div class="chart" id="chart1" :style="'width:'+width1+'px;height: 300px;'"></div>
+		  								<div class="chart-point">
+		  									<span class="num">121</span>访客
+		  								</div>
+		  							</div>
+		  						</div>
+		  						<div class="chart-con">
+		  							<div class="chart-title">
+		  								<span class='icon icon-left'>
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon2-1.png"/>
+		  								</span>
+		  								<span class="text">缴费服务</span>
+		  								<span class="icon icon-right">
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon4-2.png"/>
+		  								</span>
+		  								<span class="icon icon-right">
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon4-1.png"/>
+		  								</span>
+		  							</div>
+		  							<div class="chart-box">
+		  								<div class="chart" id="chart2":style="'width:'+width2+'px;height:300px;'"></div>
+		  								<div class="chart-point">
+		  									<span class="num">78</span>人
+		  								</div>
+		  							</div>
+		  						</div>
+		  					</div>
+							<div class="data-table chart-con">
+		  						<div class="chart-title">
+		  								<span class='icon icon-left'>
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon2-3.png"/>
+		  								</span>
+		  								<span class="text">报事报修</span>
+		  								
+		  								<span class="icon icon-right">
+		  									<img src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/showBoard/icon4-3.png"/>
+		  								</span>
+		  						</div>
+		  						<table>
+		  							<tr>
+		  								<th>
+		  									<div class="wrapper">用户</div>
+		  								</th>
+		  								<th class="border-left">
+		  									<div class="wrapper">时间</div>
+		  								</th>
+		  								<th class="border-left">
+		  									<div class="wrapper">
+		  										预约时间
+		  									</div>
+		  								</th>
+		  								<th class="border-left">
+		  									<div class="wrapper">
+		  										报修时间
+		  									</div>
+		  								</th>
+		  								<th class="border-left status">
+		  									<div class="wrapper">
+		  										状态
+		  									</div>
+		  								</th>
+		  							</tr>
+		  							<tr>
+		  								<td>
+		  									<div class="wrapper">
+			  									<div class="name">
+			  										张老三
+			  									</div>
+			  									<div class="address">
+			  										世纪大道1500号1528室
+			  									</div>
+			  									<div class="phoneNum">
+			  										15397236236
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="des">
+			  										下水道堵塞
+			  									</div>
+			  									<a class="btn">查看描述</a>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+		  										<span>订单提交</span>
+		  									</div>
+		  									
+		  								</td>
+		  							</tr>
+		  							<tr>
+		  								<td>
+		  									<div class="wrapper">
+			  									<div class="name">
+			  										张老三
+			  									</div>
+			  									<div class="address">
+			  										世纪大道1500号1528室
+			  									</div>
+			  									<div class="phoneNum">
+			  										15397236236
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="des">
+			  										下水道堵塞
+			  									</div>
+			  									<a class="btn">查看描述</a>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+		  										<span>订单提交</span>
+		  									</div>
+		  									
+		  								</td>
+		  							</tr>
+		  							<tr>
+		  								<td>
+		  									<div class="wrapper">
+			  									<div class="name">
+			  										张老三
+			  									</div>
+			  									<div class="address">
+			  										世纪大道1500号1528室
+			  									</div>
+			  									<div class="phoneNum">
+			  										15397236236
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="des">
+			  										下水道堵塞
+			  									</div>
+			  									<a class="btn">查看描述</a>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+		  										<span>订单提交</span>
+		  									</div>
+		  									
+		  								</td>
+		  							</tr>
+		  							<tr>
+		  								<td>
+		  									<div class="wrapper">
+			  									<div class="name">
+			  										张老三
+			  									</div>
+			  									<div class="address">
+			  										世纪大道1500号1528室
+			  									</div>
+			  									<div class="phoneNum">
+			  										15397236236
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017-10-12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="date">
+			  										2017/10/12
+			  									</div>
+			  									<div class="time">
+			  										12:00
+			  									</div>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+			  									<div class="des">
+			  										下水道堵塞
+			  									</div>
+			  									<a class="btn">查看描述</a>
+			  								</div>
+		  								</td>
+		  								<td class="border-left">
+		  									<div class="wrapper">
+		  										<span>订单提交</span>
+		  									</div>
+		  									
+		  								</td>
+		  							</tr>
+		  						</table>
+		  					</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/bscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+		    FastClick.attach(document.body);
+		    
+		});
+	//输出指定长度数字，前补0
+	function PrefixInteger(num, length) {
+		return (Array(length).join('0') + num).slice(-length);
+	}
+	var option1 = {
+
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {
+				data: ['1', '2'],
+				y: 'bottom',
+				textStyle: {
+					color: '#fff'
+				}
+			},
+			grid: {
+				x: '6%',
+				width: '90%',
+				borderWidth: '0'
+			},
+			calculable: true,
+
+			xAxis: [{
+				type: 'category',
+				boundaryGap: false,
+				data: ['1', '2', '3', '4', '5', '6', '7', '8'],
+				axisLine: {
+					show: false,
+
+				},
+				axisLabel: {
+					textStyle: {
+						color: '#fff'
+					}
+				},
+				splitLine: {
+					lineStyle: {
+						color: 'rgba(255,255,255,.1)'
+					}
+				}
+			}],
+			yAxis: [{
+				type: 'value',
+				axisLabel: {
+					formatter: '{value}',
+					textStyle: {
+						color: '#fff'
+					}
+				},
+				axisLine: {
+					show: false,
+
+				},
+
+				splitLine: {
+					lineStyle: {
+						color: 'rgba(255,255,255,.1)'
+					}
+				}
+			}],
+			series: [{
+					name: '1',
+					type: 'line',
+					data: [11, 11, 15, 13, 12, 13, 10, 12],
+					smooth: true,
+					itemStyle: {
+						normal: {
+							color: '#f35857'
+						}
+					},
+					markPoint: {
+						data: [{
+								type: 'max',
+								name: '最大值'
+							},
+							{
+								type: 'min',
+								name: '最小值'
+							}
+						]
+					}
+				},
+				{
+					name: '2',
+					type: 'line',
+					data: [5, 7, 5, 5, 3, 2, 9, 15],
+					smooth: true,
+					itemStyle: {
+						normal: {
+							color: '#e7cb4a'
+						}
+					},
+					markPoint: {
+						data: [{
+								type: 'max',
+								name: '最大值'
+							},
+							{
+								type: 'min',
+								name: '最小值'
+							}
+						]
+					}
+				}
+			]
+		};
+	var option2 = {
+			title: {
+				text: '+12',
+				x: 'center',
+				y: '126',
+				textStyle: {
+					"color": "#fff",
+					"fontWeight": "normal",
+					"fontSize": "40"
+				}
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'horizontal',
+				x: 'center',
+				y: 'bottom',
+				textStyle: {
+					"color": "#fff"
+				},
+				data: ['物业费', '停车费', '维修费']
+
+			},
+			toolbox: {
+				show: false
+
+			},
+			calculable: false,
+			series: [{
+				name: '访问来源',
+				type: 'pie',
+				radius: ['60%', '70%'],
+				itemStyle: {
+					normal: {
+						label: {
+							show: false
+						},
+						labelLine: {
+							show: false
+						}
+					},
+					emphasis: {
+						label: {
+							show: true,
+							position: 'center',
+							textStyle: {
+								fontSize: '30',
+								fontWeight: 'bold'
+							}
+						}
+					}
+				},
+				data: [{
+						value: 335,
+						name: '物业费',
+						itemStyle: {
+							normal: {
+								color: '#caa770'
+							}
+						}
+					},
+					{
+						value: 310,
+						name: '停车费',
+						itemStyle: {
+							normal: {
+								color: '#e7cb4a'
+							}
+						}
+					},
+					{
+						value: 234,
+						name: '维修费',
+						itemStyle: {
+							normal: {
+								color: '#f35857'
+							}
+						}
+					}
+				]
+			}]
+		};
+    new Vue({
+        el: '#app',
+        data:{
+        	date1:'2017-05-11',
+        	timeNow:'',//时间
+        	timeSlot:'',//上下午状态
+        	progress1: 0.1,//急修数据
+        	width1:'',//折线图宽
+        	width2:'',
+        	
+        },
+        methods: {
+        	test:function(){
+        		alert(00);
+        	},
+            getTimeNow(){
+            	var _this = this;
+            	setInterval(function(){
+            		var date = new Date(),
+            			hours = date.getHours(),
+            			minutes = date.getMinutes(),
+            			seconds = date.getSeconds();
+            		if(hours>12){
+            			_this.timeSlot = 'PM';
+            			hours -=12;
+            			var hour_ = PrefixInteger(hours,2);
+            			_this.timeNow = hour_+':'+minutes
+            			
+            		}else{
+            			_this.timeSlot = 'AM';
+            			
+            			var hour_ = PrefixInteger(hours,2);
+            			_this.timeNow = hour_+':'+minutes
+            		}
+            			
+            		
+            		
+            	},1000);
+            	
+            },
+            setChartWidth:function(){
+            	var width1 = $('.chart-con .chart-title').eq(0).width();
+            	var width2 = $('.chart-con .chart-title').eq(1).width();
+            	this.width1 = width1;
+            	this.width2 = width2;
+            	var myChart1 = echarts.init(document.getElementById('chart1'));
+            	var myChart2 = echarts.init(document.getElementById('chart2'));
+        		myChart1.setOption(option1);
+        		myChart2.setOption(option2);
+            	
+            },
+            setBetterScroll:function(){
+            	new BScroll(document.getElementById('scroll1'),{
+            		click:function(){
+						if (/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)) return false;
+						if (/Chrome/i.test(navigator.userAgent)) return (/Android/i.test(navigator.userAgent));
+						if (/Silk/i.test(navigator.userAgent)) return false;
+						if (/Android/i.test(navigator.userAgent)) {
+						   var s=navigator.userAgent.substr(navigator.userAgent.indexOf('Android')+8,3);
+						   return parseFloat(s[0]+s[3]) < 44 ? false : true
+					    }
+					}
+            	});
+				new BScroll(document.getElementById('scroll2'),{
+					click:function(){
+						if (/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)) return false;
+						if (/Chrome/i.test(navigator.userAgent)) return (/Android/i.test(navigator.userAgent));
+						if (/Silk/i.test(navigator.userAgent)) return false;
+						if (/Android/i.test(navigator.userAgent)) {
+						   var s=navigator.userAgent.substr(navigator.userAgent.indexOf('Android')+8,3);
+						   return parseFloat(s[0]+s[3]) < 44 ? false : true
+					    }
+					}
+				});
+            }
+        },
+        beforeCreate:function(){
+         
+        },
+        mounted:function(){
+        	this.getTimeNow();
+        	this.setChartWidth();
+        	
+        	this.setBetterScroll()
+			
+        }
+        
+    })
+	</script>
+</html>

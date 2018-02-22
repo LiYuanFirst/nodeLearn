@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>信息指南</title>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <!-- 引入样式 -->
+	    <link rel="stylesheet" href="../css/ydui.rem.css">
+	    
+	    <!--引入自定义样式-->
+	    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+	    
+	    <link rel="stylesheet" href="../font/iconfont.css">
+	    <!-- 引入rem自适应类库 -->
+	    <script src="../js/ydui.flexible.js"></script>
+	    <!-- 引入 Vue -->
+		<script src="../js/vue.js"></script>
+		<!-- 引入组件库 -->
+		<script src="../js/ydui.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+	
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="information">
+				<header>
+					<img  src="http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_banner_01.jpg"/>
+				</header>
+				<div class="container">
+					<div class="title">
+						<div class="line"></div>
+						<div class="text">常用电话</div>
+						<div class="line"></div>
+					</div>
+					<div class="con">
+						
+						<div class="box box1" v-for="(item,key) in dataList">
+							<div class="text"@click="showPopup(key)" 
+								:style="'background: url('+item.img+') right bottom no-repeat;background-color:#fff;background-size:50%;'">{{item.name}}</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<yd-popup v-model="show" position="bottom" height="60%">
+	        	<div class="popup-con information-popup">
+	        		<ul>
+	        			<li v-for="item in tel">
+	        				<a :href="'tel:'+item">{{item}}</a>
+	        				<span class="icon">
+	        					<yd-icon name="phone2" size=".48rem" color="#43c117"></yd-icon>
+	        				</span>
+	        			</li>
+	        		</ul>
+	        	</div>
+			</yd-popup>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+		    FastClick.attach(document.body);
+		    new Vue({
+		        el: '#app',
+		        data:{
+		        	show:false,
+		        	tel:[],
+		        	dataList:[
+		        		{
+		        			name:'物业',
+		        			tel:[123456,15345665,10010,123456],
+		        			img:"http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_tel_icon_01.png"
+		        		},
+		        		{
+		        			name:'居委会',
+		        			tel:[223456,25345665,20010],
+		        			img:"http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_tel_icon_02.png"
+		        		},
+		        		{
+		        			name:'快递',
+		        			tel:[323456,35345665,10010],
+		        			img:"http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_tel_icon_03.png"
+		        		},
+		        		{
+		        			name:'送水',
+		        			tel:[423456,45345665,40010],
+		        			img:"http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_tel_icon_04.png"
+		        		}
+		        	]
+		        },
+		        methods: {
+		        	showPopup:function(key){
+		        		this.tel = this.dataList[key].tel;
+		        		this.show = true;
+		        		console.log(key)
+		        	}
+		        },
+		        beforeMount:function(){
+		        	
+		        }
+		        
+		    })
+		});
+		
+	</script>
+</html>

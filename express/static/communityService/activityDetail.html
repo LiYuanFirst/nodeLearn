@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>社区动态</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/ydui.rem.css">
+    
+    <!--引入自定义样式-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!--自定义icon-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 引入rem自适应类库 -->
+    <script src="../js/ydui.flexible.js"></script>
+    <!-- 引入 Vue -->
+	<script src="../js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="../js/ydui.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body style="background:#fff">
+<div id="app" v-cloak>
+	<div class="activityDetail">
+		<h3 style="">{{title}}</h3>
+		<div class="neck">发布时间：<span>{{time}}</span><span>{{author}}</span></div>
+		<div class="notice-con" v-html="detail">
+			
+		</div>
+	</div>
+	
+</div>
+
+<script>
+
+	$(function() {
+	    FastClick.attach(document.body);
+	    new Vue({
+	        el: '#app',
+	        data:{
+	        	title:'社区晨跑运动开启啦-我们正在寻找爱晨跑的你！',
+	        	time:"2017-11-17",
+	        	author:'物业公司',
+	        	detail:`<p>
+						    <img src="http://image.135editor.com/files/users/114/1146777/201711/MWrELPT5_wfUt.png" alt="info_img_03.png" style="width:100%"/>
+						</p>
+						<p>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11月11号，为了更好地提倡大家要热爱运动，保护我们社区的生态环境，申能物业服务中心志愿者，举办了一场以“阳光运动，你我同行”为主题的社区晨跑活动。
+						</p>
+						<p>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;早上6点50分，几个活跃的参加者就赶到了在社区门口。7点集合完毕，社区志愿者带领着大家一起扭扭腰、伸展伸展身体。几个回合的热身运动完毕后，晨跑开始了。在社区党员志愿者的带领下，队伍分成两队向银湖山出发。一路上，领队带着大家有秩序的跑步，一边跑步，一边喊着“保护环境，从我做起”的口号。队伍吸引了不少的居民在旁边驻足观看，甚至还有几个居民跟着我们队伍一起跑步，一起喊口号。他们一边跑步一边向我们了解这个队伍的一些情况，党员志愿者和领队向他们简单的介绍了晨跑队伍的时间，欢迎他们以后持续参加活动。在队伍即将要下山的时候天空下起了绵绵的春雨，大家趁着避雨的时间相互自我介绍、认识，希望以后可以相约在晨跑的道路上。
+						</p>
+						<p>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这次活动后，大家对晨跑的热情高涨起来了，纷纷表示以后每周都要来参加这么有意义的活动，既能锻炼身体、交到朋友，还能为社区的生态保护做出自己的一份力量。
+						</p>
+						<p>
+						    <br/>
+						</p>`,
+	        	
+	        },
+	        methods: {
+	           
+	        },
+	        
+	        beforeMount:function(){
+	        	
+	         	
+	        }
+	        
+	    })
+	});
+    
+</script>
+</body>
+</html>

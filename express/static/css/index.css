@@ -1,0 +1,1840 @@
+.yd-cell-item:not(:last-child):after {
+    margin-left: .24rem;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+[v-cloak]{
+	display: none;
+}
+.yd-cell:after{
+	top: 100%;
+	border-bottom: solid 1px #f5f5f5;
+}
+.yd-cell-right select{
+	color: #555;
+}
+body{
+	color: #333;
+}
+.yd-rollnotice .icon{
+	display: inline-block;
+	width: 18px;
+	height: 24px;
+	flex: 0 0 18px; 
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/index_icon_notice.png) center center no-repeat;
+	background-size: contain;
+	margin: 10px 0 10px 10px;
+}
+.yd-rollnotice .label{
+	display: inline-block;
+	color:rgb(173,25,5);
+	font-size: .24rem;
+	font-weight: bold; 
+	padding: 0 10px 0 5px;
+}
+.yd-rollnotice .text{
+	flex:1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .24rem;
+}
+.yd-rollnotice-item a{
+	display: block;
+}
+.yd-grids-item:after,.yd-grids-4 .yd-grids-item:not(:nth-child(4n)):before,.yd-grids-item:before,.yd-grids-4:before{
+	border: none;
+}
+.yd-rollnotice{
+	position: relative;
+}
+.yd-rollnotice:after{
+	content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.yd-grids-icon img{
+	height: 100%;
+}
+.yd-grids-txt{
+	    padding: .1rem .2rem;
+}
+.yd-grids-item{
+	padding: .25rem 0;
+}
+.yd-grids-item:active,.yd-rollnotice-item:active{
+	background: #cdcdcd;
+}
+.col1 .yd-grids-4{
+	padding:.1rem 0;
+}
+.col1 .yd-grids-item{
+	padding: .1rem 0;
+}
+
+.meanu .yd-grids-item,.yd-rollnotice-item a{
+	font-size: .24rem;
+}
+.menu2 .yd-grids-item{
+	padding: 0;
+}
+.menu2 .yd-grids-icon{
+	height:auto;
+}
+.menu2 .yd-grids-icon img{
+	width: 100%;
+	height: auto;
+}
+.menu2 .yd-grids-txt{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	color: #fff;
+	transform: translate(-50%,0);
+	font-size: .36rem;
+	
+}
+.repair-header .yd-grids-item{
+	background: #393a3f;
+}
+.repair-header .yd-grids-txt{
+	color:#fff;
+	font-size:.32rem;
+	line-height: .4rem;
+	padding: 0;
+	margin-top: .2rem;
+}
+.repair-header .yd-grids-icon{
+	height: .9rem;
+}
+.repair-header .yd-grids-2 .yd-grids-item:not(:nth-child(2n)):before,.repair-header .yd-grids-2:before,
+.repair-neck .yd-grids-3:before,.repair-neck .yd-grids-3 .yd-grids-item:not(:nth-child(3n)):before{
+	display: none;
+}
+.repair-header span .icon{
+	display: inline-block;
+	height: .28rem;
+	width: .28rem;
+}
+.repair-neck .yd-grids-item{
+	padding: .1rem 0;
+}
+.repair-neck .yd-grids-txt{
+	color:#999;
+	font-size:.3rem;
+}
+
+.select-box .yd-cell-right{
+	min-height: 1rem;
+}
+.select-box .yd-cell-item:active{
+	background:#f5f5f5;
+}
+.repair-neck{
+	position: relative;
+}
+
+ 
+.repair-list-con .yd-cell-icon{
+	padding: .3rem 0 .5rem;
+	margin-right: .5rem;
+}
+.repair-list-con .yd-cell-icon img{
+	height: .5rem;
+}
+.repair-list-con .list-title{
+	font-size: .36rem;
+	padding-top:.1rem
+}
+.repair-list-con .list-time{
+	font-size: .3rem;
+	color: #999;
+	padding: .1rem 0;
+}
+.repair-list-con .list-type,.apply-body .list-type{
+	font-size: .34rem;
+	padding: .24rem;
+	color: #666;
+}
+.apply-body .list-type{
+	padding-left:0 ;
+	padding-top:0;
+}
+.repair-list-con .list-item-status{
+	font-size:.3rem
+}
+.repair-list-con .list-item-status.red{
+	color: #B22C24;
+}
+.repair-list-con .yd-cell-box{
+	margin-bottom: 0;
+}
+.repair-header .yd-grids-item:active{
+	background:#686868
+}
+.repair-detail-header .yd-cell-box,.repair-header{
+	border-bottom: solid 2px #F0CD61;
+}
+.repair-detail-header .yd-cell-box .yd-cell{
+	background:#393a3f;
+	padding: .4rem 0;
+}
+.repair-detail-header .yd-cell-left{
+	color: #fff;
+}
+.repair-detail-header .yd-cell-right{
+	color: #fff;
+	text-align: left;
+	font-size: .32rem;
+}
+.repair-detail-header .yd-cell-icon{
+	font-size: 0;
+	margin-right: .24rem;
+}
+.repair-detail-header .yd-cell-icon img{
+	height: 1.2rem;
+}
+.repair-detail-header .yd-cell-left .item{
+	font-size:.32rem;
+	line-height: .4rem;
+	height: .4rem;
+}
+.repair-detail-header .yd-cell-left .item .item-val{
+	display: inline-block;
+	padding-left: .1rem;
+}
+.repair-detail-header .yd-cell-left .yellow{
+	color: rgb(226,196,95);
+}
+.repair-detail-header .yd-cell:after,.yd-tab-nav-item:not(:last-child):after,.order-data .yd-cell-item:not(:last-child):after,.yd-timeline-custom-item:not(:last-child):after, .yd-timeline-item:not(:last-child):after,.order-data .yd-cell:after{
+	display: none;
+}
+.order-data .yd-cell{
+	padding: .16rem 0;
+}
+.order-data .yd-cell-right{
+	min-height:.6rem
+}
+.order-data .yd-cell-left{
+	font-size:.32rem
+}
+.order-data .yd-cell-left .name{
+	display: inline-block;
+	width: 1.6rem;
+	color: #666;
+}
+.order-step .yd-flexbox-item-center{
+	text-align: right;
+	padding-right: .8rem;
+}
+.yd-timeline{
+	font-size:.32rem
+}
+.order-step .step-con{
+	padding-left: 10px;
+}
+.yd-timeline-custom-item:first-child, .yd-timeline-item:first-child{
+	color: rgb(178,44,36);
+}
+.yd-tab-nav .yd-tab-active:before{
+	width: 50%;
+	left: 50%;
+	height: 2px;
+	transform: translateX(-50%);
+	margin-left: 0;
+	bottom: 0px;
+}
+.yd-tab-nav:after{
+	display: none;
+	height: 2px;
+	background-color:rgb(240,205,97);
+	bottom: -2px;
+}
+.yd-tab-nav{
+	border-bottom: solid 2px #F0CD61;
+}
+.yd-tab-nav-item{
+	color: #fff;
+}
+.yd-tab-nav .yd-tab-nav-item{
+	background:#393a3f;
+	font-size: .32rem;
+}
+.yd-tab-nav .yd-tab-nav-item:active{
+	background: #333;
+}
+.yd-tab-panel{
+	background: #f5f5f5;
+}
+.sub-tab{
+	margin:.26rem .24rem;
+}
+.sub-tab .yd-cell:after{
+	display: none;
+}
+.sub-tab .yd-cell-left{
+	width: 1.6rem;
+}
+.sub-tab .yd-cell-item{
+	
+}
+.repair-neck .yd-grids-txt span{
+	display: block;
+}
+.repair-neck .yd-grids-txt span span{
+	display: inline-block;
+}
+.repair-neck .yd-grids-txt span span.text{
+	padding-right:4px;
+}
+.select-con{
+	position: absolute;
+	top: 2.9rem;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 10;
+	overflow: auto;
+	display: none;
+}
+.select-con .select-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*transform: translateY(-100%);
+	transition: 1s;*/
+}
+.select-con .select-box.show{
+	/*transform: translateY(0);*/
+}
+.repair-neck .yd-grids-item:after{
+	top: 100%;
+	border-bottom: 1px solid #f5f5f5;
+}
+.select-box .icon{
+	display: none;
+}
+.select-box .active .text,.select-box .active .icon{
+	color: #B22C24;
+	display: inline-block;
+}
+.select-con:before{
+	content: "";
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    display: none;
+}
+.yd-button{
+	padding: 0;
+}
+.yd-btn-danger{
+	background: #B22C24;
+}
+.apply-body .yd-cell:after{
+	display: none;
+}
+.apply-body .yd-datetime-input{
+	letter-spacing:.02rem;
+	font-size: .36rem;
+	
+}
+.qrCode-con{
+	width: 4rem;
+	height: 4rem;
+	padding: .1rem;
+	position: relative;
+	background: #FFF;
+	margin: .2rem auto;
+}
+.qrCode-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.qrCode-con .flower{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3.2rem;
+	transform: translate(50%,-50%);
+}
+.apply-operate{
+	width: 5rem;
+	margin: .2rem auto;
+	display: flex;
+}
+.apply-operate .item{
+	flex: 1;
+	text-align: center;
+}
+.apply-operate .item .icon-con{
+	line-height: 1.2rem;
+	height: 1.2rem;
+}
+.apply-operate .item i{
+	color:#b22c24 ;
+	font-size: 1.2rem;
+}
+.apply-operate .item .icon-text{
+	font-size: .32rem;
+	margin-top: .1rem;
+	letter-spacing:.02rem;
+	color: #555;
+}
+.apply-operate .item:active i{
+	
+	color: #c14841;
+}
+.CountDown-con{
+	font-size: .3rem;
+	text-align: center;
+	margin: .2rem 0 .5rem;
+	color: #555;
+}
+.apply-body .title{
+	font-size:.32rem;
+	padding-bottom: .1rem;
+	color: #666;
+}
+.upload-img-con {
+	overflow: hidden;
+	padding-top: .1rem;
+	margin: 0 -.1rem;
+}
+.upload-img-con .upload-preview,.upload-operate{
+	float: left;
+	width: 1.4rem;
+	height: 1.4rem;
+	position: relative;
+	
+	margin: .1rem;
+	background: #fff;
+}
+.upload-img-con .upload-preview div{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.upload-img-con div img{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.upload-preview span.delate{
+	color:#ef4f4f ;
+	position: absolute;
+	right: -.24rem;
+	top: -.24rem;
+	padding: .1rem;
+}
+.upload-preview span.delate i{
+	font-size: .4rem;
+	
+}
+.yd-slider-pagination-item-active{
+	background-color: #EBC52C;
+}
+.yd-rollnotice-item{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.yd-rollnotice-item a{
+	width: 100%;
+	height: inherit;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: inherit;
+	-webkit-justify-content: inherit;
+	-ms-flex-pack: inherit;
+	justify-content: inherit; 
+	
+}
+
+#communityService.sub-tab,#communityActivity.sub-tab {
+	margin: 0;
+}
+#communityService .nolist,#communityActivity .nolist{
+	text-align: center;
+	margin: 0 auto;
+}
+#communityService .nolist img,#communityActivity .nolist img{
+	width: 42%;
+	display: block;
+	margin: 2rem auto 0;
+	
+}
+#communityService .nolist .text,#communityActivity .nolist .text{
+	font-size: .28rem;
+	color: #999999;
+	margin-top: .2rem;
+}
+#communityService.sub-tab .item,#communityActivity .item{
+	display: flex;
+	padding: .3rem .2rem;
+	background: #fff;
+	position: relative;
+}
+#communityService.sub-tab .item:active,#communityActivity .item:active{
+	background: #f9f9f9;
+}
+#communityService.sub-tab .item:before,#communityActivity .item:before{
+	content: "";
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: solid 1px #F0F2F1;
+	transform: scaleY(1);
+}
+#communityService.sub-tab .item .img-icon {
+	width: 1.2rem;
+	margin-right: .14rem;
+	
+}
+#communityService.sub-tab .item .img-icon span{
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: #EFF1F0;
+	margin:.06rem auto ;
+	text-align: center;
+	font-size: 0;
+}
+#communityService.sub-tab .item .img-icon span img{
+	width: 1rem;
+	height: 1rem;
+	color: #343434;
+}
+#communityService.sub-tab .item .notice-con{
+	flex: 1;
+	position: relative;
+	
+}
+#communityService .notice-con .title{
+	font-weight: 100;
+	font-size: .32rem;
+	line-height: .4rem;
+	position: relative;
+	height: .4rem;
+	overflow: hidden;
+}
+#communityService .notice-con .title span{
+	display: inline-block;
+	width: .16rem;
+	height: .16rem;
+	background: #EFCD61;
+	border-radius: 50%;
+	vertical-align: top;
+	margin: .08rem;
+}
+#communityService .notice-bri{
+	font-size: .28rem;
+	line-height: .36rem;
+	margin-top: .05rem ;
+	height: .72rem;
+	overflow: hidden;
+	color: #666;
+	text-align: justify;
+}
+#communityService .notice-time{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size:.28rem;
+	color: #666;
+	background: #FFF;
+	line-height: .36rem;
+	padding: 0 .1rem;
+	width: 2.14rem;
+	text-align: justify;
+	overflow: hidden;
+}
+#communityService .notice-time .time{
+	float: right;
+	color: #999;
+}
+
+#communityActivity .item .img-icon{
+	width: 2rem;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	margin-right: .2rem;
+	
+}
+#communityActivity .item .img-icon img{
+	position: absolute;
+	
+}
+#communityActivity .item .notice-con{
+	flex: 1;
+	
+	
+}
+#communityActivity .item .notice-con .title{
+	font-size: .32rem;
+	line-height: .42rem;
+	height: .84rem;
+	text-align: justify;
+	overflow: hidden;
+}
+#communityActivity .item .notice-con .title span{
+	font-size: 0;
+	display: inline-block;
+    width: .16rem;
+    height: .16rem;
+    background: #EFCD61;
+    border-radius: 100%;
+    vertical-align: top;
+    margin: .13rem 0 .13rem -.1rem;
+}
+#communityActivity .item .notice-con .notice-time{
+	font-size: .28rem;
+	color: #999999;
+	line-height: .32rem;
+	margin-top: .44rem;
+}
+.noticeDetail{
+	padding: .2rem;
+}
+.noticeDetail h3{
+	text-align: center;
+	font-size: .36rem;
+	font-weight: 100;
+	color: #333333;
+	margin: .2rem 0 .4rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.noticeDetail .notice-con{
+	font-size: .30rem;
+	line-height: .42rem;
+	
+}
+
+.activityDetail{
+	padding: .2rem;
+}
+.activityDetail h3{
+	text-align: left;
+	font-size: .36rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+	color: #333333;
+	margin: .2rem 0 0rem;
+	
+}
+.activityDetail .neck{
+	color: #999999;
+	font-size: .30rem;
+	margin-bottom:.2rem ;
+}	
+.activityDetail .neck span{
+	display: inline-block;margin: 0 .1rem;
+}
+.activityDetail .notice-con{
+	font-size: .30rem;
+	line-height: .48rem;
+	
+}
+#userCenter .header{
+	display: flex;
+	background: #393A3F;
+	color: #fff;
+	border-bottom: solid 2px #EFCD61;
+	padding: .2rem 0;
+	margin-bottom: .2rem;
+}
+#userCenter .header:active{
+	background: #404147;
+}
+#userCenter .header .img-con{
+	width: 1.6rem;
+	height: 1.6rem;
+	padding: .2rem;
+}
+#userCenter .header .img-con .box{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: solid 1px #EFCD61;
+	background: #fff;
+}
+#userCenter .header .img-con img{
+	width: 100%;
+	height: 100%;
+}
+#userCenter .header .data{
+	flex: 1;
+	position: relative;
+}
+#userCenter .header .data:before{
+	
+    display: block;
+    font-family: YDUI-INLAY;
+    font-size: .34rem;
+    line-height: .4rem;
+    color: #fff;
+    content: "\E608";
+    position: absolute;
+    right: .2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/common_arrow_m.png)center center no-repeat;
+	background-size: contain;
+}
+.yd-cell-arrow:after {
+    margin-left: .05rem;
+    margin-right: -.08rem;
+    display: block;
+    font-family: YDUI-INLAY;
+    font-size: .34rem;
+    color: #c9c9c9;
+    content: "\E608";
+    color: transparent;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/common_arrow_m.png)center center no-repeat;
+	background-size: contain;
+}
+
+#userCenter .header .data .name{
+	font-size: .32rem;
+	line-height: .4rem;
+	margin-top: .4rem;
+}
+#userCenter .header .data .mobile{
+	font-size: .28rem;
+	line-height: .4rem;
+	margin-top: .1rem;
+}
+#userCenter .yd-cell-icon{
+	font-size: 0;
+	margin-right: .2rem;
+}
+.yd-cell-box{
+	margin-bottom: .2rem;
+}
+#userCenter .yd-cell:after,#userData .yd-cell:after{
+	display: none;
+}
+#userCenter .yd-cell-item:not(:last-child):after,#userData .yd-cell-item:not(:last-child):after {
+    margin-left: 0;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: .24rem;
+    right: .24rem;
+    width: auto;
+    border-bottom: 1px solid #f5f5f5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+#userCenter .yd-cell-left,#userData .yd-cell-left{
+	font-size: .32rem;
+}
+#userData .person-img .box{
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	margin: .2rem .1rem;
+	border: solid 1px #e5e5e5;
+	
+}
+#userData .person-img .box img{
+	width: 100%;
+	height: 100%;
+}
+#userData .yd-cell-right{
+	color: #999;
+}
+#userData .yd-popup{
+	background: transparent;
+	height: auto !important;
+}
+#userData #popup-con{
+	margin: .2rem;
+	background: #FFF;
+	border-radius: .08rem;
+	overflow: hidden;
+	
+}
+#userData #popup-con .title{
+	font-size: .32rem;
+	font-weight: bold;
+	text-align: center;
+	margin: .5rem auto;
+}
+#userData #popup-con .nickName-input{
+	display: block;
+	width: 76%;
+	margin:0 12%;
+	font-size: .32rem;
+	line-height: .68rem;
+	border: solid 1px #d9d9d9;
+	border-radius: .08rem;
+	outline: none;
+	background: #fff;
+}
+#userData #popup-con .nickName-input input{
+	display: block;
+	padding: 0 .2rem;
+	margin: 0;
+	border: none;
+	height: .68rem;
+	color: #666;
+}
+#userData #popup-con .operation-con{
+	display: flex;
+	margin-top: .6rem;
+	position: relative;
+}
+#userData #popup-con .operation-con:before{
+	content: "";
+	width: 100%;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: solid 1px #d9d9d9;
+	transform: scaleY(0.5);
+}
+#userData #popup-con .operation-con:after{
+	content: "";
+	width: 0;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	border-left: solid 1px #d9d9d9;
+	transform: scaleX(0.5) translateX(-50%);
+	
+}
+#userData #popup-con .operation-con div{
+	flex: 1;
+	text-align: center;
+	font-size: .32rem;
+	height: 1rem;
+	line-height: 1rem;
+	color: #666;
+	background: #fafafa;
+	
+}
+#userData #popup-con .operation-con div:active{
+	background:#d9d9d9;
+}
+#userData #popup-con .operation-con div.save{
+	color: #b22c24;
+}
+.feedback{
+	padding: .2rem;
+}
+.feedback .yd-cell:after{
+	display: none;
+}
+.feedback .yd-textarea>textarea{
+	height: 2.4rem;
+	color: #333;
+}
+.yd-btn-danger:active{
+	background: #a42921;
+}
+.feedback .yd-btn-danger{
+	margin-top: 1.2rem;
+}
+.feedback .img-upload .img-con{
+	width: 1.4rem;
+	height: 1.4rem;
+	background: url(../img/repair_form_btn1.png) center center no-repeat;
+	background-size: contain;
+	background-color: #FFF;
+	position: relative;
+}
+.feedback .img-upload .img-con div{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+.register .img-con{
+	width: 40%;
+	margin: 1rem auto .5rem;
+}
+.register .img-con img{
+	width: 100%;
+}
+.register .yd-cell-item:not(:last-child):after,.register .yd-cell:after{
+	display: none;
+}
+.register .yd-cell-item{
+	margin: .3rem 0;
+	background: #fff;
+}
+.register .yd-cell{
+	background: transparent;
+}
+.register .yd-btn.send{
+	height: 100%;
+	width: 3.2rem;
+	background: #B22C24;
+	border-radius: 0;
+	font-size: .28rem;
+}
+.register .yd-cell-right input{
+	font-size: .32rem;
+	height: .9rem;
+}
+.register .yd-btn.send.yd-btn-disabled {
+	background: #aaa;
+}
+.register .yd-cell-right{
+	padding-right: 0;
+	min-height: .9rem;
+}
+.register .yd-cell-right .yd-input-clear{
+	height: .9rem;
+}
+.yd-confirm-hd{
+	padding: .32rem 0 .22rem;
+	font-size: .32rem;
+	text-align: center;
+}
+.yd-confirm-ft{
+	margin-top: .28rem;
+}
+.yd-confirm-hd .yd-confirm-title{
+	font-size: .32rem;
+	color: #B22C24;
+}
+.yd-confirm-bd{
+	color: #333333;
+	font-size: .28rem;
+	text-align: center;
+	line-height: .48rem;
+}
+.information header {
+	font-size: 0;
+}
+.information header img{
+	width: 100%;
+}
+.information .container .title{
+	width: 2.8rem;
+	display: flex;
+	margin: .6rem auto .2rem;
+	height: .48rem; 
+	overflow: hidden;
+} 
+.information .container .title .line{
+	width: .6rem;
+	height: 0;
+	border-bottom: solid 1px #666;
+	vertical-align: top;
+	margin-top: .23rem;
+}
+.information .container .title .text{
+	color: #333333;
+	font-size: .32rem;
+	line-height:.48rem;
+	flex: 1;
+	text-align: center;
+}
+.information .container .con{
+	padding:.1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.information .container .con .box{
+	flex: 0 0 33.333%;
+	text-align: center;
+
+}
+.information .container .con .box .text{
+	margin:.2rem .1rem;
+	height: 1.08rem;
+	line-height: 1.08rem;
+	color: #dc9048;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/guide_tel_icon_01.png) right bottom no-repeat;
+	background-size: 50%;
+	background-color:#fff;
+	border-radius: .04rem;
+	font-size: .32rem;
+}
+.information .container .con .box .text:active{
+	background-color: #f7f7f7;
+}
+.information-popup ul{
+	
+}
+.information-popup li{
+	font-size: .28rem;
+	color: #333333;
+	line-height: .96rem;
+	height: .96rem;
+	position: relative;
+	padding: 0 .28rem;
+	display: flex;
+}
+.information-popup li:after{
+	content: "";
+	width: 100%;
+	height: 0;
+	border-bottom: solid 1px #f2f2f2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scaleY(1);
+}
+.information-popup li:active{
+	background: #f9f9f9;
+}
+.information-popup li a{
+	color: #333333;
+	flex: 1;
+	
+}
+.information-popup li .icon{
+	width: .48rem;
+}
+.apply-body .fastOpen{
+	font-size: 0;
+	background: url();
+	margin:.2rem 0 .4rem;
+	
+}
+.apply-body .fastOpen img{
+	width: 100%;
+}
+.apply-body .point-text{
+	font-size: .28rem;
+	color: #666;
+}
+.apply-body .point-text span{
+	color: #B22C24;
+}
+.slide-con{
+	position: relative;
+}
+.slide-con .address-chose-show{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	color: #fff;
+	margin:.1rem .2rem;
+	line-height: .6rem;
+	height: .6rem;
+	display: flex;
+	
+	
+}
+.slide-con .address-chose-show .text{
+	font-size: .28rem;
+	width: 2rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: relative;
+	padding:0 .3rem 0 .1rem;
+}
+.slide-con .address-chose-show .text:after{
+	content: "";
+	width: 0rem;
+	height: 0;
+	border: solid .1rem transparent;
+	border-top: solid .15rem #fff;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-30%);
+	
+}
+.slide-con .addressList .yd-cell-item.active{
+	color: ;
+}
+.slide-con .addressList .active .text, .slide-con .addressList .active .icon{
+	color: #B22C24;
+    display: inline-block;
+}
+.billPayment .historyBill{
+	text-align: right;
+	padding: .2rem;
+	height: .72rem;
+}
+.billPayment .historyBill .icon{
+	display: inline-block;
+	vertical-align: top;
+	height: .32rem;
+	font-size: 0;
+}
+.billPayment .historyBill .icon img{
+	height: 100%;
+}
+.billPayment .historyBill .text{
+	display: inline-block;
+	vertical-align: top;
+	font-size: .28rem;
+	line-height: .28rem;
+	margin-top: .02rem;
+}
+.billPayment .sub-tab{
+	margin: 0;
+}
+.billPayment-con{
+	display: flex;
+	background: #fff;
+	padding: .2rem .24rem .2rem 0;
+	position: relative;
+}
+.billPayment-con :after{
+	content: "";
+	width: 100%;
+	height: 0;
+	border-bottom: solid 1px #f5f5f5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/*transform: scaleY(1);*/
+}
+.billPayment-con .checkbox{
+	width: 1rem;
+	/*position: relative;*/
+	
+}
+.billPayment-con .checkbox input{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+}
+.billPayment-con .checkbox label{
+	/*position: absolute;
+	top: 50%;
+	left: 50%;*/
+	width: .38rem;
+	height: .38rem;
+	display: block;
+	/*background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/bill_icon_select.png) center center no-repeat;
+	background-size: contain;*/
+	border: solid 1px #C9C9C9;
+	border-radius: 50%;
+	margin: .26rem auto;
+	
+}
+.billPayment-con .checkbox input[type="checkbox"]:checked+label{
+	border-color: #b22c24;
+	border: none;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/bill_icon_select_s.png) center center no-repeat;
+	background-size: contain;
+}
+.billPayment-con .icon{
+	width: .9rem;
+	font-size: 0
+}
+.billPayment-con .icon img{
+	width: 100%;
+}
+.billPayment-con .bill-data{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding-left: .2rem;
+}
+.billPayment-con .bill-data .name{
+	color: #333333;
+	font-size: .32rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: .38rem;
+	flex: 1;
+	vertical-align: top;
+}
+.billPayment-con .bill-data .date{
+	color: #999;
+	font-size: .24rem;
+	line-height: .4rem;
+	flex: 1;
+	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.billPayment-con .amount{
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+.billPayment-con .amount .money{
+	font-size: .32rem;
+	flex: 1;
+	line-height: .32rem;
+}
+.billPayment-con .amount .money.red{
+	color: #B22C24;
+}
+.billPayment-con .amount .arrears{
+	flex: 1;
+	color: #B22C24;
+	font-size: .28rem;
+	line-height: .4rem;
+}
+.billPayment .footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1rem;
+	background: #fff;
+	
+}
+.billPayment .footer .con{
+	display: flex;
+}
+.billPayment .footer .con .radio{
+	width: 1.9rem;
+	position: relative;
+	font-size: 0;
+}
+
+.billPayment .footer .con .radio label{
+	
+	width: .38rem;
+	height: .38rem;
+	display: block;
+	border: solid 1px #C9C9C9;
+	border-radius: 50%;
+	margin: .31rem 0 .31rem .31rem;
+
+	
+}
+.billPayment .footer .con .radio input[type="checkbox"]:checked+label{
+	border-color: #b22c24;
+	border: none;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/bill_icon_select_s.png) center center no-repeat;
+	background-size: contain;
+}
+.billPayment .footer .con .radio input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 2;
+}
+.billPayment .footer .con .radio .text{
+	position: absolute;
+	top: 0;
+	height: 1rem;
+	left: .94rem;
+	font-size: .28rem;
+	line-height: 1rem;
+	
+}
+.billPayment .footer .con .total-amount{
+	flex: 1;
+	font-size: .36rem;
+	text-align: right;
+	padding-right: .2rem;
+	line-height: 1rem;
+}
+.billPayment .footer .con .total-amount span{
+	color: #B22C24;
+}
+.billPayment .footer .con .total{
+	width: 2rem;
+	text-align: center;
+	background: #B22C24;
+	color: #FFF;
+	font-size: .36rem;
+	line-height: 1rem;
+}
+.identificationRes .img-con{
+	width: 36%;
+	font-size: 0;
+	margin: .4rem auto .6rem;
+}
+.identificationRes .img-con img{
+	width: 100%;
+}
+.identificationRes .res-con{
+	margin: .24rem 0;
+	display: flex;
+	background: #fff;
+	padding: .24rem;
+}
+.identificationRes .res-con .user-img{
+	width: 2.2rem;
+	border: solid 1px #eff1f1;
+	font-size: 0;
+}
+.identificationRes .res-con .user-img img{
+	width: 100%;
+}
+.identificationRes .res-con .user-data{
+	display: flex;
+	flex-direction: column;
+	margin-left: .48rem;
+	justify-content: center;
+
+}
+.identificationRes .res-con .user-data div{
+	flex: 1;
+	vertical-align: middle;
+	font-size: .28rem;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox; 
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-box-align: center; 
+	-moz-box-align: center; 
+	-ms-flex-align: center; 
+	-webkit-align-items: center; 
+	align-items: center;
+
+}
+.identificationRes .point-text{
+	text-align: center;
+}
+.identificationRes .point-text a{
+	color: #B22C24;
+	padding-left: .1rem;
+}
+.identificationError .img-con{
+	width: 40%;
+	margin: 2rem auto 1rem;
+	font-size: 0;
+}
+.identificationError .img-con img{
+	width: 100%;
+}
+.identificationError .warring{
+	font-size: .36rem;
+	color: #B22C24;
+	text-align: center;
+	font-weight: bold;
+}
+.identificationError .point-text{
+	text-align: center;
+	margin: .1rem 0;
+}
+
+
+.yd-switch {
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 48px;
+    height: 28px;
+    left: 0;
+    border: 1px solid #dfdfdf;
+    border-radius: 16px;
+    background-color: #dfdfdf;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.yd-switch:before,.yd-switch:after {
+    width: 26px;
+    height: 26px;
+    
+}
+.yd-timeline-item:first-child>.yd-timeline-icon{
+	background-color: #b22c24;
+}
+
+.QRcodeHis .list-con{
+	background: #fff;
+	display: flex;
+	padding: .24rem;
+	position: relative;
+}
+.QRcodeHis .list-con:active{
+	background: #f7f7f7;
+}
+.QRcodeHis .list-con:not(:last-child):after {
+    
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.QRcodeHis .list-con .box{
+	flex: 1;
+}
+.QRcodeHis .list-con .box .validity{
+	font-size: .32rem;
+	line-height: .32rem;
+}
+.QRcodeHis .list-con .box .setTime{
+	font-size: .24rem;
+	line-height: .24rem;
+	margin-top: .24rem;
+	color: #999;
+}
+.QRcodeHis .list-con .delate{
+	
+	font-size: .32rem;
+	color: #B22C24;
+	vertical-align: middle;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox; 
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-box-align: center; 
+	-moz-box-align: center; 
+	-ms-flex-align: center; 
+	-webkit-align-items: center; 
+	align-items: center;
+	text-align: right;
+}
+.QRcodeHis .list-con.disabled{
+	background: #fafafa;
+}
+.QRcodeHis .list-con.disabled .box{
+	background: #fafafa;
+	color: #aaa;
+	
+}
+.yd-rollnotice .red{
+	color: #B22C24;
+}
+#accountChange{
+	padding:0 .2rem;
+}
+#accountChange .account-con{
+	background: #fff;
+	margin-top: .2rem;
+	position: relative;
+}
+
+#accountChange .account-con .cir{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: .48rem;
+	height: .48rem;
+	padding: 0 0 .1rem .1rem;
+	border-radius: 0 0 0 100%;
+	text-align: center;
+	line-height: .48rem;
+	color: #fff;
+	background: #3a393e;
+}
+#accountChange .account-con.default .cir{
+	background: #BD2C00;
+}
+#accountChange .account-con .list-con{
+	padding: .30rem .2rem;
+}
+#accountChange .account-con .list-con .item{
+	display: flex;
+	margin-top: .30rem;
+}
+#accountChange .account-con .list-con .item:first-child{
+	margin-top: 0;
+}
+#accountChange .account-con .list-con .item .icon{
+	width: .4rem;
+	height: .4rem;
+	font-size: 0;
+}
+#accountChange .account-con .list-con .item .icon img{
+	width: 100%;
+}
+#accountChange .account-con .list-con .item .text{
+	flex: 1;
+	margin-left: .3rem;
+	font-size: .32rem;
+	line-height: .4rem;
+}
+#accountChange .account-con .set{
+	border-top: dashed 1px #f5f5f5;
+	display: flex; 
+	padding: .38rem .2rem;
+	position: relative;
+/*	margin-top: .2rem*/
+}
+#accountChange .account-con .set:before{
+	position: absolute;
+	content: "";
+	width: .34rem;
+	height: .34rem;
+	background: #F5F5F5;
+	border-radius: 50%;
+	top: -.17rem;
+	left: -.17rem;
+
+}
+#accountChange .account-con .set:after{
+	position: absolute;
+	content: "";
+	width: .34rem;
+	height: .34rem;
+	background: #F5F5F5;
+	border-radius: 50%;
+	top: -.17rem;
+	right: -.17rem;
+
+}
+#accountChange .account-con  label {
+    width: .38rem;
+    height: .38rem;
+    display: block;
+    background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/bill_icon_select.png) center center no-repeat;
+	background-size: contain;
+    border-radius: 50%;
+   
+}
+#accountChange .account-con.default label {
+    width: .38rem;
+    height: .38rem;
+    display: block;
+    background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/bill_icon_select_s.png) center center no-repeat;
+	background-size: contain;
+    border-radius: 50%;
+   
+}
+#accountChange .account-con .text{
+	flex: 1;
+	font-size: .28rem;
+	color: #666;
+	margin-left: .32rem;
+	vertical-align: middle;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox; 
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-box-align: center; 
+	-moz-box-align: center; 
+	-ms-flex-align: center; 
+	-webkit-align-items: center; 
+	align-items: center;
+	text-align: right;
+	
+	
+}
+#changeImg{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+#changeImg .img-default{
+	flex: 1;
+}
+#changeImg .img-default .img-con{
+	width: 100%;
+}
+#changeImg .img-default .img-con img{
+	width: 100%;
+}
+#changeImg .img-chose{
+	height: 1rem;
+	color: #333;
+	display: flex;
+	background: #fff;
+}
+#changeImg .img-chose div{
+	flex: 1;
+	text-align: center;
+	line-height: 1rem;
+	font-size: .32rem;
+}
+#changeImg .img-chose div.cancel{
+	border-right: solid 1px #f5f5f5;
+}
+/*维修人员页面样式*/
+.w-index .header{
+	background: #5684c0;
+	color: #fff;
+	padding: .25rem .3rem .3rem;
+}
+.w-index .header .title{
+	display: flex;
+}
+.w-index .header .title .left{
+	text-align: left;
+	font-size: .36rem;
+	line-height: 1;
+	flex: 1;
+}
+.w-index .header .title .right{
+	flex: 1;
+	text-align: right;
+	font-size: .28rem;
+	line-height: .36rem;
+}
+.w-index .header .con{
+	padding: .3rem .25rem;
+	background: #FFF;
+	color: #5684C0;
+	font-size: .32rem;
+	line-height: .32rem;
+	margin-top: .25rem;
+	border-radius: .08rem;
+}
+.w-index .header .con .item:last-child{
+	margin-top: .25rem;
+}
+.w-index .list-con .card{
+	display: block;
+	background: #fff;
+	border-top: solid .1rem #5684c0;
+	position: relative;
+	overflow: hidden;
+}
+.w-index .yd-rollnotice .icon{
+	margin-left: .3rem;
+}
+.w-index .list-con .card .blink{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1.6rem;
+	height: .6rem;
+	padding-left: .3rem;
+	color: #fff;
+	font-size: .28rem;
+	line-height: .6rem;
+	background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/work_tag3.png) center center no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.w-index .list-con .card .order-code{
+	font-size: 0;
+	line-height: .36rem;
+	margin:.25rem 0 .50rem .3rem;
+}
+.w-index .list-con .card .order-code{
+	font-size: .32rem;
+}
+.w-index .list-con .card .order-code .sign{
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	background: #BD2C00;
+	color: #FFF;
+	font-size: .28rem;
+	text-align: center;
+	border-radius: 50%;
+}
+.w-index .list-con .card .item{
+	margin: 0rem .3rem .25rem;
+	display: flex;
+	line-height: .32rem;
+	font-size: .28rem;
+	color: #666;
+}
+.w-index .list-con .card .item .item-name{
+	width: 1.6rem;
+}
+.w-index .list-con .card .item .item-val{
+	flex: 1;
+}
+
+.w-detail .header{
+	background: #5684c0;
+	color: #fff;
+	padding: .25rem .3rem .3rem;
+	border-bottom: solid 2px #7AC4F5;
+}
+.w-detail .header .title{
+	font-size: .32rem;
+	line-height: .36rem;
+}
+.w-detail .header .title span{
+	margin-right: .1rem;
+}
+.w-detail .header .title .sign{
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	background: #BD2C00;
+	color: #FFF;
+	font-size: .28rem;
+	text-align: center;
+	border-radius: 50%;
+}
+.w-detail .header .con{
+	margin-top: .2rem;
+}
+.w-detail .header .con .item{
+	display: flex;
+	font-size: .28rem;
+	margin: .1rem 0 0;
+}
+.w-detail .header .con .item .item-name{
+	width: 1.4rem;
+}
+.w-detail .header .con .item .item-val{
+	flex: 1;
+}
+.w-detail .header .con .item .item-val.item-img div{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -.1rem;
+}
+
+.w-detail .header .con .item .item-val.item-img img{
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: .1rem;
+	background-color: #f5f5f5;
+	border-radius: .04rem;
+}
+.w-detail .list-con{
+	padding: .3rem;
+	overflow: hidden;
+}
+.w-detail .list-con .item{
+	display: flex;
+	margin-bottom: .2rem;
+	background: #fff;
+	padding: .2rem;
+}
+.w-detail .list-con .item .item-name{
+	width: 1.6rem;
+	font-size: .32rem;
+	color: #666;
+	line-height: .5rem;
+	
+}
+.w-detail .list-con .item .item-val{
+	flex: 1;
+	font-size: .32rem;
+	color: #333;
+
+}
+.w-detail .list-con .item .item-val input{
+	border: none;
+	height: .5rem;
+	line-height: .5rem;
+	width: 100%;
+}
+.w-detail .list-con .item .item-val.payType{
+	display: flex;
+}
+.w-detail .list-con .item .item-val.payType i{
+	vertical-align: middle;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox; 
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-box-align: center; 
+	-moz-box-align: center; 
+	-ms-flex-align: center; 
+	-webkit-align-items: center; 
+	align-items: center;
+	text-align: right;
+	color: #999;
+}
+.w-detail .list-con .item .yd-cell-item{
+	padding-left: 0;
+}
+.w-detail .list-con .item .yd-cell-box{
+	width: 100%;
+	margin-bottom: 0;
+}
+.w-detail .list-con .item .yd-cell-item .yd-cell-right{
+	padding-right: 0;
+}
+.w-detail .list-con .item .yd-textarea{
+	padding: 0;
+	font-size: .32rem;
+}
+.w-detail .list-con .item .yd-textarea textarea{
+	font-size: .32rem;
+}
+.w-detail .list-con .item .yd-cell:after{
+	display: none;
+}
+/*维修人员页面样式--end*/
+
+/*主管页面样式*/
+.d-index.w-index .header,.w-detail.d-detail .header{
+	background: #7E6B5A;
+	color: #fff;
+	padding: .25rem .3rem .3rem;
+}
+.d-index.w-index .header .con{
+	color: #7E6B5A;	
+}
+.d-index.w-index .list-con .card{
+	border-top-color: #7E6B5A;
+}
+.d-index.w-index .list-con .card .blink {
+    
+    background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/work_tag1.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+.d-index.w-index .list-con .card.no-belong{
+	border-top-color: #D1C0A5;
+}
+.d-index.w-index .list-con .card.no-belong .blink {
+    
+    background: url(http://bucket-shwy.oss-cn-hangzhou.aliyuncs.com/wechat/image/work_tag2.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+.w-detail.d-detail .header{
+	border-bottom-color: #D1C0A5;
+}
+/*主管页面样式--end*/
