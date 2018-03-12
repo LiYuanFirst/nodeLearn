@@ -5,7 +5,13 @@ var formidable = require("formidable");
 var md5 = require("../models/md5.js");
 var db = require("../models/db.js");
 exports.showIndex = function(req,res,next){
-    res.render("index");
+    if(req.session.login){
+        res.render("index",{"login":true,"username":req.session.username});
+    }else{
+        res.render("index",{"login":false});
+    }
+
+
 }
 exports.showLogin = function(req,res,next){
     res.render("login");
@@ -41,7 +47,11 @@ exports.doRegister = function(req,res,next){
                         res.json({"result":1});
                         return;
                     }
+                    req.session.login = true;
+                    req.session.username = username;
                     res.json({"result":0});
+
+
                 })
             }else{
                 res.json({"result":-1});

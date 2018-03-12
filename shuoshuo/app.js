@@ -5,6 +5,13 @@ var express = require("express");
 var app = express();
 var router = require("./router/router.js");
 
+var cookieParser = require("cookie-parser");
+var session = require("express-session");
+app.use(session({
+    secret:"keyboard cat",
+    resave: false,
+    saveUninitialized: true
+}));
 
 app.set("view engine","ejs");
 

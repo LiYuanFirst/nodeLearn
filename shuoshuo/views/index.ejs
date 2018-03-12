@@ -31,12 +31,24 @@
                     <li><a href="#">Link</a></li>
 
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/login">登录</a></li>
-                    <li><a href="/register">注册</a></li>
-                </ul>
+                <% if(login){ %>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/#">欢迎你，<%= username %></a></li>
+                    </ul>
+                <% }else{ %>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/login">登录</a></li>
+                        <li><a href="/register">注册</a></li>
+                    </ul>
+
+                <% } %>
+
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <%= login %>
 </body>
+<script>
+    console.log(<%= login %>);
+</script>
 </html>
